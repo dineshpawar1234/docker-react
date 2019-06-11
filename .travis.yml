@@ -4,6 +4,7 @@ services:
 
 before_install:
   - rvm install 2.6.0
+  - ruby --version
   - sudo gem install rake
   - sudo gem install bundler -v '< 2'
   - docker build -t dinesh/docker-react -f Dockerfile .

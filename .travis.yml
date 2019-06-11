@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install:
-  - rbenv install 2.6.0
-  - sudo gem install buldler
+  
+  - sudo gem update --system
   - docker build -t dinesh/docker-react -f Dockerfile .
 
 script:

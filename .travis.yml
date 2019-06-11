@@ -6,7 +6,7 @@ before_install:
   - docker build -t dinesh/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run dinesh/docker-react  
+  - docker run -p 3000:3000 dinesh/docker-react  
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"

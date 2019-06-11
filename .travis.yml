@@ -3,10 +3,12 @@ services:
   - docker
 
 before_install:
-  - docker build -t dinesh/docker-react -f Dockerfile.dev .
+  - sudo gem install ruby
+  - sudo gem install buldler
+  - docker build -t dinesh/docker-react -f Dockerfile .
 
 script:
-  - docker run -p 3000:3000 dinesh/docker-react  
+  - docker run dinesh/docker-react  
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"

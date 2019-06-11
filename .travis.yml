@@ -4,6 +4,7 @@ services:
 
 before_install:
   - rvm install 2.6.0
+  - rbenv global 2.6.0
   - sudo gem install bundler -v '< 2'
   - docker build -t dinesh/docker-react -f Dockerfile .
 

@@ -3,9 +3,7 @@ services:
   - docker
 
 before_install:
-  - 'sudo gem install bundler'
-  - 'rake spec'
-  - docker build -t dinesh/docker-react -f Dockerfile .
+  - docker build -t dinesh/docker-react -f Dockerfile.dev .
 
 script:
   - docker run dinesh/docker-react  
